@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/layoutTopUser"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
@@ -36,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,19 @@
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/baseline_notifications_24"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTopUser"
+        android:layout_marginTop="20dp">
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search for a job or company"
+            android:iconifiedByDefault="false"/>
     </RelativeLayout>
 
 </RelativeLayout>
